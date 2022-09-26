@@ -1,32 +1,44 @@
-console.log( "hola mundo");
+alert("Bienvenido/a a heladeria Lia")
 
-let espaciado = " "
-let productoA = "Mesa"
-let productoB = "Silla"
-let productoC = "Lampara"
+alert("Hoy tenemos en stock los siguiente sabores de helados* \n -Dulce de leche a $600 \n -Chocolate a $600 \n -Americana a $550 \n -Crema del cielo a $500 \n Si no desea comprar ponga ESC \n *Solo tenemos baldes de 1/2 kilo por hoy")
 
-let precioProductoA = 100
-let precioProductoB = 40
-let precioProductoC = 25
+function Productos(nombre, precio){
+    this.nombre = nombre;
+    this.precio = precio;
+}
 
-let eligeProducto = prompt("Que producto esta buscando? \n Mesa \n Silla \n Lampara" )
+let producto1 = new Productos ("Dulce de leche", 600);
+let producto2 = new Productos ("Chocolate", 600);
+let producto3 = new Productos ("Americana", 550);
+let producto4 = new Productos ("Crema del cielo", 500);
 
-let cantidad = prompt("Indique la cantidad:")
+let elegirSabor = prompt("¿Que helado le gustaria comprar?")
+while(elegirSabor != "ESC"){
+    let cantidadDeHelado = prompt("¿Cuantos baldes le gustaria comprar de " + elegirSabor + "?")
+    if(elegirSabor == "Dulce de leche"){
+        let totalDulceDeLeche = alert( "Su total a abonar es: " + cantidadDeHelado * producto1.precio)
+        
+    }
+    else if (elegirSabor == "Chocolate"){
+        let totalChocolate = alert("Su total a abonar es: " + cantidadDeHelado * producto2.precio)
+        
+    }
+    else if (elegirSabor == "Americana"){
+        let totalAmericana = alert("Su total a abonar es: " + cantidadDeHelado * producto3.precio)
+        
+    }
+    else if (elegirSabor == "Crema del cielo"){
+        let totalCremaDelCielo = alert("Su total a abonar es: " + cantidadDeHelado * producto4.precio)
+        
+    }
+    else{
+        alert("Si no desea comprar nada mas ponga ESC")
+    }
+    elegirSabor = prompt("¿Que helado le gustaria comprar?")
 
-if(eligeProducto == "Mesa"){
-    alert("El total de su compra es:" + precioProductoA * cantidad)}
-else if(eligeProducto == "Silla"){
-    alert("El total de su compra es:" + precioProductoB * cantidad)}
-else if (eligeProducto == "Lampara"){
-    alert("El total de su compra es:" + precioProductoC * cantidad)}
-else{
-    alert("Perdon no tenemos ese producto disponible")}
+    let totalDeLaCompra =  alert(totalDulceDeLeche + totalChocolate + totalAmericana + totalCremaDelCielo)
+    
+    
 
-console.log("Final del Ejercicio")
-console.log ("Este es el precio de la" + espaciado + productoA)
-
-
-
-
-
+}
 

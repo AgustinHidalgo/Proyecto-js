@@ -3,18 +3,35 @@
 //ciclos y bucles
 //empezamos con el for -> su estructura es for (desde, hasta, actualizacion) --> por lo general se usan numeros
 
+console.log( "hola mundo");
 
-let numero1 = parseInt(prompt("Ingrese un numero del 1 al 10:"))
-let suma = 0
+let espaciado = " "
+let productoA = "Mesa"
+let productoB = "Silla"
+let productoC = "Lampara"
 
-for( let i = 0; i<10; i= i + 1){
-    let numero2= parseInt(prompt("Ingrese el numero que desea sumar:"))
-    suma = numero1 + numero2
-    console.log(suma)
-    
+let precioProductoA = 100
+let precioProductoB = 40
+let precioProductoC = 25
+
+let eligeProducto = prompt("Que producto esta buscando? \n Mesa \n Silla \n Lampara" )
+
+let cantidad = prompt("Indique la cantidad:")
+
+if(eligeProducto == "Mesa"){
+    alert("El total de su compra es:" + precioProductoA * cantidad)}
+else if(eligeProducto == "Silla"){
+    alert("El total de su compra es:" + precioProductoB * cantidad)}
+else if (eligeProducto == "Lampara"){
+    alert("El total de su compra es:" + precioProductoC * cantidad)}
+else{
+    alert("Perdon no tenemos ese producto disponible")}
+
+console.log("Final del Ejercicio")
+console.log ("Este es el precio de la" + espaciado + productoA)
 
 
-}
+
 
 
 
