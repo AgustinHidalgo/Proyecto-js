@@ -12,33 +12,44 @@ let producto2 = new Productos ("Chocolate", 600);
 let producto3 = new Productos ("Americana", 550);
 let producto4 = new Productos ("Crema del cielo", 500);
 
-let elegirSabor = prompt("¿Que helado le gustaria comprar?")
+let precioTotal = 0
+
+function calcularPrecio(cantidad, precio){
+    precioTotal += (cantidad * precio)
+
+}
+
+
+let elegirSabor = prompt("¿Que helado le gustaria comprar?").toUpperCase()
 while(elegirSabor != "ESC"){
     let cantidadDeHelado = prompt("¿Cuantos baldes le gustaria comprar de " + elegirSabor + "?")
-    if(elegirSabor == "Dulce de leche"){
+    if(elegirSabor == "DULCE DE LECHE"){
         let totalDulceDeLeche = alert( "Su total a abonar es: " + cantidadDeHelado * producto1.precio)
-        
+        calcularPrecio(cantidadDeHelado, producto1.precio)
     }
-    else if (elegirSabor == "Chocolate"){
+    else if (elegirSabor == "CHOCOLATE"){
         let totalChocolate = alert("Su total a abonar es: " + cantidadDeHelado * producto2.precio)
-        
+        calcularPrecio(cantidadDeHelado, producto2.precio)
     }
-    else if (elegirSabor == "Americana"){
+    else if (elegirSabor == "AMERICANA"){
         let totalAmericana = alert("Su total a abonar es: " + cantidadDeHelado * producto3.precio)
-        
+        calcularPrecio(cantidadDeHelado, producto3.precio)
     }
-    else if (elegirSabor == "Crema del cielo"){
+    else if (elegirSabor == "CREMA DEL CIELO"){
         let totalCremaDelCielo = alert("Su total a abonar es: " + cantidadDeHelado * producto4.precio)
-        
+        calcularPrecio(cantidadDeHelado, producto4.precio)
     }
     else{
         alert("Si no desea comprar nada mas ponga ESC")
     }
-    elegirSabor = prompt("¿Que helado le gustaria comprar?")
-
-    let totalDeLaCompra =  alert(totalDulceDeLeche + totalChocolate + totalAmericana + totalCremaDelCielo)
+    elegirSabor = prompt("¿Que helado le gustaria comprar?").toUpperCase()
     
     
 
 }
-
+if(precioTotal != 0){
+    alert("El precio total es " + precioTotal)
+}
+else{
+    alert("Gracias por su visita")
+}
