@@ -57,7 +57,7 @@ let stockProductoB = 20 */
 let precioProductoC = 20
 let stockProductoC = 50 */
 
-function Producto(nombre, precio, stock){
+/* function Producto(nombre, precio, stock){
     this.nombre = nombre;
     this.precio = precio;
     this.stock = stock || 0;
@@ -73,15 +73,15 @@ function Producto(nombre, precio, stock){
 let productoA = new Producto("Mesa", 100, 20)
 let productoB = new Producto("Silla", 10, 10)
 let productoC = new Producto("Lampara", 20)
-let precioTotal = 0
+let precioTotal = 0 */
 
 //let compra = prompt("Ingrese SI si quiere comprar: " + nombreProductoA + " y " + nombreProductoB)
 
-alert("Estos son nuestros productos: \n - Mesa\n - Silla\n - Lampara")
+/* alert("Estos son nuestros productos: \n - Mesa\n - Silla\n - Lampara") */
 
 //Ciclo de compra con FOR
 
-function calculoPrecio(cantidad, precio){
+/* function calculoPrecio(cantidad, precio){
     precioTotal += (cantidad * precio)
 }
 
@@ -130,7 +130,7 @@ else{
     alert("Gracias por su visita!")
 }
 
-
+ */
 
 
 
