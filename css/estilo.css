@@ -6,7 +6,9 @@ section h1{
     margin: 40px;
     
 }
-
+#items{
+    margin: 0px
+}
 ul{
     list-style: none;
     display: flex;
@@ -34,7 +36,24 @@ h1{
     height: 200px;
     display: flex;
     padding: 10px;
+    
+    
 }
 #pDestacados div{
     padding: 0 30px;
+}
+
+#categoria{
+    height: 30px;
+    margin: 20px;
+    
+}
+#filtro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#filtrado{
+    height: 30px;
 }
